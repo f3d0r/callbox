@@ -6,7 +6,7 @@ module.exports = (req, res) => {
   const response = new VoiceResponse();
 
   const gather = response.gather({ finishOnKey: '#' });
-  gather.say('You entered ' + gather.toString());
+  response.say('You entered ' + gather.toString());
   
   // If the user doesn't enter input, loop
   
