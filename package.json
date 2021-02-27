@@ -1,0 +1,20 @@
+{
+  "author": "Fedor Paretsky <me@fedor.me>",
+  "dependencies": {
+    "micro": "^9.3.4",
+    "twilio": "^3.57.0",
+    "typescript": "^4.2.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "callbox",
+  "repository": "git@github.com:f3d0r/callbox.git",
+  "scripts": {
+    "start": "micro src/index.js"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/micro": "^7.3.3",
+    "@types/node": "^14.14.31"
+  }
+}
