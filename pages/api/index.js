@@ -16,8 +16,8 @@ module.exports = (req, res) => {
   }
 
   // If the user entered digits, process their request
-  if (request.body.Digits) {
-    switch (request.body.Digits) {
+  if (req.body.Digits) {
+    switch (req.body.Digits) {
       case '1':
         twiml.say('You selected sales. Good for you!');
         break;
