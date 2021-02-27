@@ -8,21 +8,18 @@ module.exports = (req, res) => {
 
   /** helper function to set up a <Gather> */
   function gather() {
-    const gatherNode = twiml.gather({ numDigits: 1 });
-    gatherNode.say('For sales, press 1. For support, press 2.');
+    const gatherNode = twiml.gather({ finishOnKey: '#' });
+    gatherNode.say('Entry code.');
 
     // If the user doesn't enter input, loop
-    twiml.redirect('/voice');
+    twiml.redirect('/api');
   }
 
   // If the user entered digits, process their request
   if (req.body.Digits) {
     switch (req.body.Digits) {
-      case '1':
-        twiml.say('You selected sales. Good for you!');
-        break;
-      case '2':
-        twiml.say('You need support. We will help!');
+      case '1234':
+        twiml.say('Buzzing you in now!.');
         break;
       default:
         twiml.say("Sorry, I don't understand that choice.").pause();
