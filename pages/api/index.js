@@ -36,5 +36,5 @@ module.exports = (req, res) => {
 
   // Render the response as XML in reply to the webhook request
   res.setHeader('Content-Type', 'text/xml')
-  send(res, 200, response.toString());
+  send(res, 200, twiml.toString());
 }
