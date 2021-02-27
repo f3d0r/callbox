@@ -20,6 +20,7 @@ module.exports = (req, res) => {
     switch (req.body.Digits) {
       case '1234':
         twiml.say('Buzzing you in now!.');
+        twiml.play({ digits: 9, loop: 3 });
         break;
       default:
         twiml.say("Sorry, I don't understand that choice.").pause();
